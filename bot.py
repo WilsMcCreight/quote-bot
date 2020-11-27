@@ -7,6 +7,8 @@ from dotenv import load_dotenv
 import pandas as pd
 import sqlite3
 
+from db_control import connect_db
+
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
