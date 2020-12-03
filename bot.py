@@ -80,7 +80,8 @@ async def on_message(message):
                 quotee_name = meta_data[0]
                 context = (" ").join(meta_data)
                 log_quote((author_name, quotee_name, quote_text, context), insert_quote)
-
+            if message.channel != "quotes":
+                await client.get_channel(780989714978570260).send(text)
 
 
 def log_quote(quote, insert_func):
